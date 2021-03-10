@@ -2,9 +2,9 @@
 
 namespace CityInfo.API.Controllers
 {
-    interface ICitiesController
+    public interface ICitiesController
     {
-        IActionResult GetCities();
-        IActionResult GetCity(int id);
+        ActionResult GetCities();
+        ActionResult GetCity(int id);
     }
 }

@@ -10,7 +10,7 @@ namespace CityInfo.API.Controllers
     public class CitiesController : ControllerBase, ICitiesController
     {
         [HttpGet]
-        public IActionResult GetCities()
+        public ActionResult GetCities()
         {
             List<CityDTO> citiesToReturn = CitiesDataStore.Current.Cities;
 
@@ -18,7 +18,7 @@ namespace CityInfo.API.Controllers
         }
 
         [HttpGet("{id}")]
-        public IActionResult GetCity(int id)
+        public ActionResult GetCity(int id)
         {
             var cityToReturn = CitiesDataStore.Current.Cities
                 .FirstOrDefault(x => x.Id == id);
